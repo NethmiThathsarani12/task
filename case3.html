@@ -42,6 +42,11 @@
         document.querySelector("h1").style.color='red';
     });
 
+    document.querySelector("#btn2").addEventListener("click", function () {
+        const imageUrl = document.querySelector("#url").value;
+        document.querySelector("#img").innerHTML = `<img src="${imageUrl}" alt="Image">`;
+    });
+
 
     //Case Two
     //Bind an event for Change Image Btn
