@@ -2,29 +2,57 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Task Two</title>
+    <link rel="stylesheet" href="../../asets/css/bootstrap.css">
 </head>
 <body>
-    <section>
-         <h1 id="h1ID">What is BOM & What is DOM</h1>
-         <h1 id="h2ID">HII</h1>
-         <input type="text">
-         <button>Click</button>
-    </section>
 
-    <script>
-        document.querySelector("#h1ID").addEventListener("click",function (){
-        document.querySelector("#h1ID").remove()
+<section class="container">
+    <h1>Task Generator.!</h1>
+    <div class="row">
+        <div class="col-4">
+            <input id="txt" class="form-control" type="text" placeholder="Input a Task">
+            <button id="btn" class="btn btn-danger mt-2">Add Task</button>
+        </div>
+        <div class="offset-1 col-3 shadow overflow-x-hidden" style="height: 70vh">
+            <ol id="list" class="list-group p-2">
+                <li class="list-group-item">Task One</li>
+            </ol>
+        </div>
+    </div>
+</section>
+
+
+<script>
+    //Bind an event for Change Text Btn
+    //Get Input Text Value
+    //Create a list element
+    //Add it to the Ordered List
+
+    const inputElement = document.querySelector("#txt");
+    const addButton = document.querySelector("#btn");
+
+    const listElement = document.querySelector("#list");
+
+    addButton.addEventListener("click", function () {
+
+        const taskText = inputElement.value.trim();
+
+
+        if (taskText !== "") {
+
+            const listItem = document.createElement("li");
+            listItem.className = "list-group-item";
+            listItem.textContent = taskText;
+
+
+            listElement.appendChild(listItem);
+
+
+            inputElement.value = "";
+        }
     });
 
-    
-    document.querySelector("button").addEventListener("click",function (){
-        document.querySelector("input").value;
-        Document.querySelector("#h2ID").innerHTML. document.querySelector("input").value;
-    });
-
-
-    </script>
+</script>
 </body>
 </html>
