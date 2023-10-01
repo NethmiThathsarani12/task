@@ -31,29 +31,25 @@
     //Get Input Text Value
     //Assign it to H1 text
     //Change the color of h1 to red
-    //Change font size t0 4em
+    //Change font size to 4em
 
-
-    document.querySelector("#txt").addEventListener("keyup",function(){
-        document.querySelector("h1").innerText=document.querySelector("#txt").value;
+    document.querySelector("#txt").addEventListener("keyup", function () {
+        document.querySelector("h1").innerText = document.querySelector("#txt").value;
     });
 
-    document.querySelector("#btn1").addEventListener("click",function (){
-        document.querySelector("h1").style.color='red';
+    document.querySelector("#btn1").addEventListener("click", function () {
+        document.querySelector("h1").style.color = 'red';
+        document.querySelector("h1").style.fontSize = '4em';
     });
-
-    document.querySelector("#btn2").addEventListener("click", function () {
-        const imageUrl = document.querySelector("#url").value;
-        document.querySelector("#img").innerHTML = `<img src="${imageUrl}" alt="Image">`;
-    });
-
 
     //Case Two
     //Bind an event for Change Image Btn
     //Get Input URL Value
     //Assign it to the Image src
-
-
+    document.querySelector("#btn2").addEventListener("click", function () {
+        const imageUrl = document.querySelector("#url").value;
+        document.querySelector("#img").innerHTML = `<img src="${imageUrl}" alt="Image">`;
+    });
 </script>
 </body>
 </html>
